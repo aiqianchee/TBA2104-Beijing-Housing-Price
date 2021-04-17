@@ -30,7 +30,7 @@ to.exclude = c(1:5, 15, 26, 27, 7, 18)
 #without rooms
 to.exclude = c(1:5, 9:12, 15, 26, 27, 7, 18)
 
-house.trained = house.train[,-to.excluded.col]
+house.trained = house.train[,-to.exclude]
 model.trained = train(totalPriceLog ~., data = house.trained, method = "lm", trControl = train.control)
 
 summary(k.model)
